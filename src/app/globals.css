@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  --radius: 0.75rem;
+}
+
+/* Sun view — warm cream + coral */
+html[data-view="sun"] {
+  --background: #FAF3E7;
+  --surface: #FFFBF4;
+  --ink: #2B2118;
+  --muted: #77655A;
+  --accent: #D95B3B;
+  --accent-strong: #B4442A;
+  --line: #EBDCC8;
+  --foreground: var(--ink);
+  --card: var(--surface);
+  --border: var(--line);
+  --primary: var(--accent);
+  --primary-foreground: #FFFBF4;
+}
+
+/* Moon view — deep indigo + silver */
+html[data-view="moon"] {
+  --background: #121830;
+  --surface: #1A2140;
+  --ink: #E8EDF8;
+  --muted: #9AA5C4;
+  --accent: #A8BCE8;
+  --accent-strong: #C9D6F2;
+  --line: #273056;
+  --foreground: var(--ink);
+  --card: var(--surface);
+  --border: var(--line);
+  --primary: var(--accent);
+  --primary-foreground: #121830;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: system-ui, -apple-system, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
